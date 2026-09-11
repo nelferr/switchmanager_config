@@ -67,7 +67,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -243,7 +243,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -518,7 +518,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -674,7 +674,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -938,7 +938,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -1142,7 +1142,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -1406,7 +1406,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -1603,7 +1603,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -1860,7 +1860,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -2064,7 +2064,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -2328,7 +2328,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -2532,7 +2532,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -2796,7 +2796,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -3000,7 +3000,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -3234,7 +3234,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -3402,7 +3402,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -3629,7 +3629,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -3797,7 +3797,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -4024,7 +4024,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -4192,7 +4192,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -4419,7 +4419,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -4587,7 +4587,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -4814,7 +4814,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -4982,7 +4982,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -5209,7 +5209,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -5377,7 +5377,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -5604,7 +5604,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -5772,7 +5772,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -5999,7 +5999,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -6167,7 +6167,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -6360,7 +6360,7 @@
               {
                 "sequence": [
                   {
-                    "action": "light.toggle",
+                    "action": "light.turn_on",
                     "metadata": {},
                     "data": {},
                     "target": {
@@ -6394,7 +6394,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -6449,7 +6449,7 @@
               {
                 "sequence": [
                   {
-                    "action": "light.toggle",
+                    "action": "light.turn_on",
                     "metadata": {},
                     "data": {},
                     "target": {
@@ -6538,7 +6538,7 @@
               {
                 "sequence": [
                   {
-                    "action": "light.toggle",
+                    "action": "light.turn_off",
                     "metadata": {},
                     "data": {},
                     "target": {
@@ -6572,7 +6572,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -6627,7 +6627,7 @@
               {
                 "sequence": [
                   {
-                    "action": "light.toggle",
+                    "action": "light.turn_off",
                     "metadata": {},
                     "data": {},
                     "target": {
@@ -6808,7 +6808,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -6976,7 +6976,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -7203,7 +7203,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -7371,7 +7371,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -7633,7 +7633,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -7735,7 +7735,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -7859,7 +7859,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -7961,7 +7961,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -8103,7 +8103,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -8329,7 +8329,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -8623,7 +8623,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -8841,7 +8841,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -9117,7 +9117,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -9335,7 +9335,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -9550,33 +9550,23 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [
@@ -9586,7 +9576,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -9618,9 +9608,7 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [
@@ -9634,9 +9622,7 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               }
             ]
           },
@@ -9652,33 +9638,23 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [
@@ -9720,9 +9696,7 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [
@@ -9736,9 +9710,7 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               }
             ]
           },
@@ -9754,33 +9726,23 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [
@@ -9790,7 +9752,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -9822,9 +9784,7 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [
@@ -9838,9 +9798,7 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               }
             ]
           },
@@ -9856,33 +9814,23 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [
@@ -9976,9 +9924,7 @@
                     ]
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               },
               {
                 "sequence": [
@@ -9992,9 +9938,7 @@
                     }
                   }
                 ],
-                "mode": "single",
-                "loop": false,
-                "loop_interval": 250
+                "mode": "single"
               }
             ]
           }
@@ -10053,7 +9997,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -10221,7 +10165,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -10448,7 +10392,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -10616,7 +10560,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -10843,7 +10787,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -11011,7 +10955,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -11238,7 +11182,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -11406,7 +11350,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -11634,7 +11578,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -11751,7 +11695,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -11839,7 +11783,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -12103,7 +12047,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -12279,7 +12223,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -12514,7 +12458,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -12682,7 +12626,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -12909,7 +12853,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -13085,7 +13029,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -13173,7 +13117,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -13278,7 +13222,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -13454,7 +13398,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -13542,7 +13486,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -13647,7 +13591,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -13823,7 +13767,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -14058,7 +14002,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -14226,7 +14170,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -14453,7 +14397,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -14621,7 +14565,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -14848,7 +14792,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -15024,7 +14968,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
@@ -15259,7 +15203,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
@@ -15435,7 +15379,7 @@
                       "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "dim_dir": "{{ (data.variables.dim_dir | default(1) | int) * -1 }}"
+                        "dim_dir": -1
                       }
                     }
                   },
