@@ -30,6 +30,10 @@ Two-area switches (Type B, 5 switches) use `area_id_1` (left) and `area_id_2` (r
 
 ## Changelog
 
+### v1.2 — 2025-09-28
+- `INT-16-COR-Q3` converted to Type B (two-area): B1/B3 (left) → `corredor_q3`, B2/B4 (right) → `cozinha`
+- B2: single `turn_on`, hold dim-up (`dim_dir = +1`), release; B4: single `turn_off`, hold dim-down (`dim_dir = −1`), release
+
 ### v1.1 — 2025-09-28
 - `INT-16-COZ` renamed to `INT-16-COR-Q3`; area reassigned from `cozinha` to `corredor_q3`
 
