@@ -5157,13 +5157,13 @@
         ]
       },
       "20": {
-        "name": "INT-16-COZ",
+        "name": "INT-16-COR-Q3",
         "enabled": true,
         "blueprint": "oxrs-4-button-switch",
         "identifier": "stat/OXRS-01/16",
         "variables": {
           "dim": 0,
-          "area_id_1": "cozinha",
+          "area_id_1": "corredor_q3",
           "area_id_2": 0,
           "dim_dir": -1,
           "cct_dir": 1,
