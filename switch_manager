@@ -5164,7 +5164,7 @@
         "variables": {
           "dim": 0,
           "area_id_1": "corredor_q3",
-          "area_id_2": 0,
+          "area_id_2": "cozinha",
           "dim_dir": -1,
           "cct_dir": 1,
           "scene_idx": 3
@@ -5262,7 +5262,15 @@
           {
             "actions": [
               {
-                "sequence": [],
+                "sequence": [
+                  {
+                    "action": "light.turn_on",
+                    "target": {
+                      "area_id": "{{ data.variables.area_id_2 }}"
+                    },
+                    "data": {}
+                  }
+                ],
                 "mode": "single"
               },
               {
@@ -5285,37 +5293,32 @@
                 "sequence": [
                   {
                     "action": "switch_manager.set_variables",
+                    "target": {},
                     "data": {
-                      "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 1,
-                        "cct_dir": "{{ (data.variables.cct_dir | default(1) | int) * -1 }}"
+                        "dim_dir": 1
                       }
                     }
                   },
                   {
                     "repeat": {
+                      "while": [
+                        {
+                          "condition": "template",
+                          "value_template": "{{ data.variables.dim == 1 }}"
+                        }
+                      ],
                       "sequence": [
                         {
                           "action": "light.turn_on",
+                          "target": {
+                            "area_id": "{{ data.variables.area_id_2 }}"
+                          },
                           "data": {
                             "transition": 0.2,
-                            "color_temp_step": "{{ 25 * (data.variables.cct_dir | int) }}"
-                          },
-                          "target": {
-                            "area_id": "{{ data.variables.area_id_1 }}"
+                            "brightness_step": "{{ 10 * (data.variables.dim_dir | int) }}"
                           }
-                        },
-                        {
-                          "delay": {
-                            "milliseconds": 200
-                          }
-                        }
-                      ],
-                      "until": [
-                        {
-                          "condition": "template",
-                          "value_template": "{{ data.variables.dim != 1 }}"
                         }
                       ]
                     }
@@ -5327,8 +5330,8 @@
                 "sequence": [
                   {
                     "action": "switch_manager.set_variables",
+                    "target": {},
                     "data": {
-                      "switch_id": "{{ data.switch_id }}",
                       "variables": {
                         "dim": 0
                       }
@@ -5430,7 +5433,15 @@
           {
             "actions": [
               {
-                "sequence": [],
+                "sequence": [
+                  {
+                    "action": "light.turn_off",
+                    "target": {
+                      "area_id": "{{ data.variables.area_id_2 }}"
+                    },
+                    "data": {}
+                  }
+                ],
                 "mode": "single"
               },
               {
@@ -5453,98 +5464,51 @@
                 "sequence": [
                   {
                     "action": "switch_manager.set_variables",
+                    "target": {},
                     "data": {
-                      "switch_id": "{{ data.switch_id }}",
                       "variables": {
-                        "scene_idx": "{{ (data.variables.scene_idx | default(3) | int + 1) % 4 }}"
+                        "dim": 1,
+                        "dim_dir": -1
                       }
                     }
                   },
                   {
-                    "choose": [
-                      {
-                        "conditions": [
-                          {
-                            "condition": "template",
-                            "value_template": "{{ data.variables.scene_idx | int == 0 }}"
-                          }
-                        ],
-                        "sequence": [
-                          {
-                            "action": "light.turn_on",
-                            "data": {
-                              "brightness": 255,
-                              "color_temp": 250,
-                              "transition": 0.5
-                            },
-                            "target": {
-                              "area_id": "{{ data.variables.area_id_1 }}"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "conditions": [
-                          {
-                            "condition": "template",
-                            "value_template": "{{ data.variables.scene_idx | int == 1 }}"
-                          }
-                        ],
-                        "sequence": [
-                          {
-                            "action": "light.turn_on",
-                            "data": {
-                              "brightness": 100,
-                              "color_temp": 370,
-                              "transition": 0.5
-                            },
-                            "target": {
-                              "area_id": "{{ data.variables.area_id_1 }}"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "conditions": [
-                          {
-                            "condition": "template",
-                            "value_template": "{{ data.variables.scene_idx | int == 2 }}"
-                          }
-                        ],
-                        "sequence": [
-                          {
-                            "action": "light.turn_on",
-                            "data": {
-                              "brightness": 200,
-                              "color_temp": 300,
-                              "transition": 0.5
-                            },
-                            "target": {
-                              "area_id": "{{ data.variables.area_id_1 }}"
-                            }
-                          }
-                        ]
-                      }
-                    ],
-                    "default": [
-                      {
-                        "action": "light.turn_on",
-                        "data": {
-                          "brightness": 15,
-                          "color_temp": 454,
-                          "transition": 0.5
-                        },
-                        "target": {
-                          "area_id": "{{ data.variables.area_id_1 }}"
+                    "repeat": {
+                      "while": [
+                        {
+                          "condition": "template",
+                          "value_template": "{{ data.variables.dim == 1 }}"
                         }
-                      }
-                    ]
+                      ],
+                      "sequence": [
+                        {
+                          "action": "light.turn_on",
+                          "target": {
+                            "area_id": "{{ data.variables.area_id_2 }}"
+                          },
+                          "data": {
+                            "transition": 0.2,
+                            "brightness_step": "{{ 10 * (data.variables.dim_dir | int) }}"
+                          }
+                        }
+                      ]
+                    }
                   }
                 ],
                 "mode": "single"
               },
               {
-                "sequence": [],
+                "sequence": [
+                  {
+                    "action": "switch_manager.set_variables",
+                    "target": {},
+                    "data": {
+                      "variables": {
+                        "dim": 0
+                      }
+                    }
+                  }
+                ],
                 "mode": "single"
               }
             ]
