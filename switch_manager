@@ -3,7 +3,7 @@
   "minor_version": 1,
   "key": "switch_manager",
   "data": {
-    "version": "5.1.1",
+    "version": "5.3.3",
     "managed_switches": {
       "8": {
         "name": "INT-21-ESC",
