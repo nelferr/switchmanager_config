@@ -8831,10 +8831,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -8955,10 +8980,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -9101,10 +9151,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -9225,10 +9300,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -9389,10 +9489,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -9513,10 +9638,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -9659,10 +9809,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -9783,10 +9958,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -9945,10 +10145,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -10069,10 +10294,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -10215,10 +10465,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -10339,10 +10614,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -10501,10 +10801,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -10625,10 +10950,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -10771,10 +11121,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
@@ -10895,10 +11270,35 @@
               {
                 "sequence": [
                   {
+                    "alias": "Turn off floor 0 lights except exterior, Quarto 2 and ISQ2",
                     "action": "light.turn_off",
                     "target": {
-                      "floor_id": "0"
+                      "area_id": "{{ floor_areas('0') | reject('in', ['exterior_entrada', 'exterior_lixos_2', 'quarto_2', 'isq2']) | list }}"
                     }
+                  },
+                  {
+                    "alias": "Lock the garage if it is not locked",
+                    "if": [
+                      {
+                        "condition": "not",
+                        "conditions": [
+                          {
+                            "condition": "state",
+                            "entity_id": "lock.garagem",
+                            "state": "locked"
+                          }
+                        ]
+                      }
+                    ],
+                    "then": [
+                      {
+                        "action": "lock.lock",
+                        "target": {
+                          "entity_id": "lock.garagem"
+                        },
+                        "continue_on_error": true
+                      }
+                    ]
                   }
                 ],
                 "mode": "single"
