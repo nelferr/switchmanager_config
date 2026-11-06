@@ -111,9 +111,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -199,9 +221,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -287,9 +331,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -375,9 +441,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -510,9 +598,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -605,9 +715,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -722,9 +854,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -817,9 +971,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -952,9 +1128,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -1047,9 +1245,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -1164,9 +1384,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -1259,9 +1501,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -1394,9 +1658,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -1482,9 +1768,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -1599,9 +1907,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -1687,9 +2017,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -1822,9 +2174,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -1917,9 +2291,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -2034,9 +2430,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -2129,9 +2547,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -2264,9 +2704,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -2359,9 +2821,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -2476,9 +2960,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -2571,9 +3077,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -2706,9 +3234,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -2801,9 +3351,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -2918,9 +3490,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -3013,9 +3607,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -3118,9 +3734,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -3206,9 +3844,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -3294,9 +3954,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -3382,9 +4064,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -3487,9 +4191,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -3575,9 +4301,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -3663,9 +4411,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -3751,9 +4521,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -3856,9 +4648,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -3944,9 +4758,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -4032,9 +4868,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -4120,9 +4978,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -4225,9 +5105,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -4313,9 +5215,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -4401,9 +5325,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -4489,9 +5435,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -4594,9 +5562,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -4682,9 +5672,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -4770,9 +5782,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -4858,9 +5892,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -4963,9 +6019,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -5051,9 +6129,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -5139,9 +6239,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -5227,9 +6349,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -5332,9 +6476,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -5420,9 +6586,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -5508,9 +6696,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -5596,9 +6806,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -5701,9 +6933,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -5789,9 +7043,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -5877,9 +7153,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -5965,9 +7263,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -6069,9 +7389,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -6157,9 +7499,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -6245,9 +7609,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -6333,9 +7719,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -6438,9 +7846,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -6526,9 +7956,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -6614,9 +8066,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -6702,9 +8176,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -6807,9 +8303,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -6895,9 +8413,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -6983,9 +8523,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -7071,9 +8633,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -7211,9 +8795,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -7313,9 +8919,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -7437,9 +9065,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -7539,9 +9189,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -7681,9 +9353,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -7783,9 +9477,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -7907,9 +9623,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -8009,9 +9747,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -8149,9 +9909,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -8251,9 +10033,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -8375,9 +10179,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -8477,9 +10303,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -8617,9 +10465,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -8719,9 +10589,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -8843,9 +10735,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -8945,9 +10859,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -9050,9 +10986,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -9138,9 +11096,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -9226,9 +11206,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -9314,9 +11316,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -9419,9 +11443,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -9507,9 +11553,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -9595,9 +11663,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -9683,9 +11773,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -9788,9 +11900,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -9876,9 +12010,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -9964,9 +12120,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -10052,9 +12230,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -10157,9 +12357,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -10245,9 +12467,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -10333,9 +12577,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -10421,9 +12687,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -10526,9 +12814,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -10614,9 +12924,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -10702,9 +13034,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -10790,9 +13144,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -10896,9 +13272,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -11013,9 +13411,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -11101,9 +13521,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -11218,9 +13660,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -11323,9 +13787,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -11411,9 +13897,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -11499,9 +14007,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -11587,9 +14117,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -11692,9 +14244,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -11780,9 +14354,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -11868,9 +14464,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -11956,9 +14574,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -12061,9 +14701,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -12149,9 +14811,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -12237,9 +14921,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -12325,9 +15031,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -12430,9 +15158,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -12518,9 +15268,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -12606,9 +15378,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -12694,9 +15488,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -12799,9 +15615,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -12887,9 +15725,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -12975,9 +15835,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -13063,9 +15945,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -13168,9 +16072,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -13256,9 +16182,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -13344,9 +16292,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -13432,9 +16402,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -13537,9 +16529,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -13625,9 +16639,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -13713,9 +16749,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -13801,9 +16859,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -13906,9 +16986,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -13994,9 +17096,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -14082,9 +17206,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -14170,9 +17316,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
@@ -14275,9 +17443,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -14363,9 +17553,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -14451,9 +17663,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           },
@@ -14539,9 +17773,31 @@
                         "dim": 0
                       }
                     }
+                  },
+                  {
+                    "delay": {
+                      "seconds": 2
+                    }
+                  },
+                  {
+                    "variables": {
+                      "held_lights": "{{ expand(area_entities(data.variables.area_id_2 or data.variables.area_id_1)) | selectattr('domain', 'eq', 'light') | selectattr('state', 'eq', 'on') | map(attribute='entity_id') | list }}"
+                    }
+                  },
+                  {
+                    "condition": "template",
+                    "value_template": "{{ held_lights | count > 0 }}"
+                  },
+                  {
+                    "action": "adaptive_lighting.set_manual_control",
+                    "data": {
+                      "entity_id": "switch.adaptive_lighting_kasa",
+                      "lights": "{{ held_lights }}",
+                      "manual_control": true
+                    }
                   }
                 ],
-                "mode": "single"
+                "mode": "parallel"
               }
             ]
           }
