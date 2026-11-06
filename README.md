@@ -30,11 +30,18 @@ Hold: `switch_manager.set_variables` (`switch_id` is required) sets `dim = 1` an
 
 Release (mode `parallel`): sets `dim = 0` first, so the ramp stops at once. After 2 s it calls `adaptive_lighting.set_manual_control` (`manual_control: true`) on the lights of the same area that are on ("pin AL"), so Adaptive Lighting's next periodic update does not undo the hold. Without this, a ramp up from off was not detected as manual control and Adaptive Lighting faded the lights to its own brightness about a minute later. Adaptive Lighting keeps one manual-control list for all zones, so one call naming `switch.adaptive_lighting_kasa` covers lights in the Jantar and Escadas-Exterior-Cobertura zones too; lights in no zone are ignored. The flag clears the next time the light turns on, or with the `Restore Adaptive Lighting` script.
 
-Press 2x-5x slots are not standardised. Variables `cct_dir` and `scene_idx` are unused leftovers of the holds removed in v1.3.
+Press 3x on all four buttons of the Quarto 3 switches (`INT-03-Q3`, `INT-04-ISQ3`, `INT-10-Q3`, `INT-15-Q3`) is "good night":
+1. `light.turn_off` on every floor `0` area except `exterior_entrada`, `exterior_lixos_2`, `quarto_2` and `isq2` (the area list is built from `floor_areas('0')`, so new floor 0 areas are included automatically)
+2. `lock.lock` on `lock.garagem` if it is not already `locked` (`continue_on_error`, so an offline lock does not stop anything)
+
+Other press 2x-5x slots are not standardised. Variables `cct_dir` and `scene_idx` are unused leftovers of the holds removed in v1.3.
 
 ---
 
 ## Changelog
+
+### v1.5 - 2026-11-06
+- Quarto 3 press 3x (16 actions on `INT-03-Q3`, `INT-04-ISQ3`, `INT-10-Q3`, `INT-15-Q3`): no longer turns off Exterior Entrada, Exterior Lixos, Quarto 2 or ISQ2 lights; also locks `lock.garagem` when it is not locked
 
 ### v1.4 - 2026-11-06
 - Release on all four buttons of all 37 switches (148 actions): after stopping the ramp, mark the area's lit lights as manually controlled in Adaptive Lighting, so a hold is no longer overridden about a minute later
